@@ -75,3 +75,8 @@ This project is a property rental platform built using React.js and Tailwind CSS
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/Shivamch02/property-rental-platform.git
+   cd property-rental-platform
+   npm install
+   npm start
+- Navigate to http://localhost:3000 to view the app.
+
