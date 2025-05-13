@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Property Rental Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a property rental platform built using React.js and Tailwind CSS. The platform allows users to explore a variety of rental properties, filter and sort them based on different criteria, book properties, manage bookings in a cart, and proceed to checkout. The application is designed to be responsive, providing a seamless user experience across both desktop and mobile devices.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+### 1. Property Listings
+- Display a variety of properties with images, titles, descriptions, and prices.
+- Include a "Book Now" button for each property to allow users to add properties to their cart.
+- Each property has detailed information including price per night, location, number of bedrooms, and amenities.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2. Filtering and Sorting
+- Implement filters to allow users to sort properties by:
+  - **Location**
+  - **Price Range**
+  - **Number of Bedrooms**
+  - **Amenities**
+- Users can apply these filters from a sort section that is collapsible, providing a clean and intuitive user interface.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 3. Booking Management
+- Implement a booking management system to allow users to add properties to a cart.
+- Users can view their cart, which displays:
+  - The properties they have booked.
+  - The ability to increase or decrease the number of nights for each booking.
+  - A remove button to delete a property from the cart.
+- Real-time updates of the total cost and item count are displayed in the cart.
 
-### `npm test`
+### 4. Checkout Process
+- Implement a checkout process that calculates the total cost of the booked properties.
+- Users can enter booking details, including contact and payment information.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 5. Responsive Design
+- The website is fully responsive and optimized for both desktop and mobile devices.
+- Tailwind CSS is used to ensure consistency and flexibility in the design across different screen sizes.
 
-### `npm run build`
+## Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Frontend
+- **React.js**: A JavaScript library for building user interfaces. It allows for efficient component-based development, making the app modular and maintainable.
+- **React Router**: Used for managing routing in the application, enabling navigation between different pages (e.g., property listings, cart, checkout).
+- **Tailwind CSS**: A utility-first CSS framework that provides low-level styling options. It helps in creating a responsive and modern UI with minimal effort.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### State Management
+- **React useState Hook**: Used for managing local state in functional components, such as the list of booked properties and filters.
+- **React useEffect Hook**: Utilized for handling side effects in the application, like updating the cart total when properties are added or removed.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Approach
 
-### `npm run eject`
+1. **Component-Based Architecture**:
+   - The application is built using a component-based architecture, where each feature or UI section is encapsulated in its own React component. This makes the codebase modular, easy to understand, and maintain.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **State Management**:
+   - Local state is managed using React's `useState` hook. The state includes properties like the list of booked items, filters applied, and the total count of items in the cart.
+   - The `useEffect` hook is used to manage side effects such as calculating the total cost when the cart is updated.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Responsive Design**:
+   - Tailwind CSS was chosen for its flexibility and ease of use in creating responsive designs. Media queries are utilized to adjust layouts based on screen size, ensuring the platform is accessible on various devices.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Real-Time Cart Management**:
+   - The cart is updated in real-time as users add or remove items. The `Header` component displays the total number of items in the cart, which updates dynamically.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. **Filtering and Sorting**:
+   - Filters are applied using simple conditional logic in the `PropertyList` component. The filtering options are provided in a collapsible section, keeping the interface clean.
 
-## Learn More
+## Additional Notes
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Scalability**: The app is designed with scalability in mind. As more features or pages are added, the component-based structure will support easy expansion.
+- **Error Handling**: Basic error handling is in place to manage potential issues like adding duplicate properties to the cart or attempting to checkout with an empty cart.
+- **Future Improvements**: Potential enhancements include integrating a backend for managing property data and implementing user authentication for a more personalized experience.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## How to Run the Project
 
-### Code Splitting
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Shivamch02/property-rental-platform.git
+   cd property-rental-platform
+   npm install
+   npm start
+- Navigate to http://localhost:3000 to view the app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
